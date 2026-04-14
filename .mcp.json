@@ -1,6 +1,49 @@
 {
   "name": "flight-logger-mcp",
-  "description": "MEOK AI Labs Uflight logger",
+  "description": "MEOK AI Labs - AI Governance & Compliance",
   "version": "1.0.0",
-  "author": "MEOK AI Labs"
+  "tools": [
+    {
+      "name": "log_flight",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "drone_id": {
+            "type": "string"
+          },
+          "duration_min": {
+            "type": "number"
+          },
+          "distance_km": {
+            "type": "number"
+          },
+          "max_altitude_m": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "drone_id",
+          "duration_min",
+          "distance_km",
+          "max_altitude_m"
+        ]
+      }
+    },
+    {
+      "name": "flight_summary",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "drone_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "drone_id"
+        ]
+      }
+    }
+  ]
 }
