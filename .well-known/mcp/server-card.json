@@ -1,0 +1,54 @@
+{
+  "name": "flight-logger",
+  "description": "Drone and aircraft flight logging. Log flights, track compliance, view history, and manage maintenance. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/flight-logger-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "log_flight",
+      "description": "Log a completed drone/aircraft flight with full telemetry data."
+    },
+    {
+      "name": "flight_summary",
+      "description": "Get flight history and statistics for a drone or all drones."
+    },
+    {
+      "name": "compliance_report",
+      "description": "Generate a compliance report for a drone \u2014 regulatory adherence, altitude violations, maintenance status."
+    },
+    {
+      "name": "list_drones",
+      "description": "List all registered drones and their flight statistics."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "IoT & Hardware",
+    "Security & Compliance"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
