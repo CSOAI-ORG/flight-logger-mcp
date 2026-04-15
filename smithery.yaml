@@ -1,6 +1,6 @@
 name: flight-logger-mcp
-description: Drone and aircraft flight logging. Log flights, track compliance, view
-  history, and manage maintenan
+description: MCP server for flight logger. Features log flight, flight summary, compliance
+  report. From MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: log_flight
@@ -40,8 +40,8 @@ tools:
     type: integer
     required: false
 - name: compliance_report
-  description: "Generate a compliance report for a drone \u2014 regulatory adherence,\
-    \ altitude violations, maintenance status."
+  description: Generate a compliance report for a drone — regulatory adherence, altitude
+    violations, maintenance status.
   parameters:
   - name: drone_id
     type: string

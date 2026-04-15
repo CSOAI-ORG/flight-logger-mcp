@@ -1,6 +1,6 @@
 {
   "name": "flight-logger-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Drone and aircraft flight logging. Log flights, track compliance, view history, and manage maintenan",
+  "description": "MCP server for flight logger. Features log flight, flight summary, compliance report. From MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {

@@ -9,5 +9,6 @@
   },
   "dependencies": {
     "mcp": "^1.0.0"
-  }
+  },
+  "description": "MCP server for flight logger. Features log flight, flight summary, compliance report. From MEOK AI Labs."
 }
