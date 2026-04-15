@@ -1,9 +1,10 @@
 name: flight-logger-mcp
-description: MEOK AI Labs - AI Governance & Compliance
+description: Drone and aircraft flight logging. Log flights, track compliance, view
+  history, and manage maintenan
 version: 1.0.0
 tools:
 - name: log_flight
-  description: ''
+  description: Log a completed drone/aircraft flight with full telemetry data.
   parameters:
   - name: drone_id
     type: string
@@ -17,9 +18,34 @@ tools:
   - name: max_altitude_m
     type: number
     required: true
+  - name: location
+    type: string
+    required: false
+  - name: notes
+    type: string
+    required: false
+  - name: battery_start_pct
+    type: number
+    required: false
+  - name: battery_end_pct
+    type: number
+    required: false
 - name: flight_summary
-  description: ''
+  description: Get flight history and statistics for a drone or all drones.
+  parameters:
+  - name: drone_id
+    type: string
+    required: false
+  - name: last_n
+    type: integer
+    required: false
+- name: compliance_report
+  description: "Generate a compliance report for a drone \u2014 regulatory adherence,\
+    \ altitude violations, maintenance status."
   parameters:
   - name: drone_id
     type: string
     required: true
+- name: list_drones
+  description: List all registered drones and their flight statistics.
+  parameters: []

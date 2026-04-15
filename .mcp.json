@@ -1,11 +1,11 @@
 {
   "name": "flight-logger-mcp",
-  "description": "MEOK AI Labs - AI Governance & Compliance",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Drone and aircraft flight logging. Log flights, track compliance, view history, and manage maintenan",
   "version": "1.0.0",
   "tools": [
     {
       "name": "log_flight",
-      "description": "",
+      "description": "Log a completed drone/aircraft flight with full telemetry data.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -20,6 +20,18 @@
           },
           "max_altitude_m": {
             "type": "number"
+          },
+          "location": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "battery_start_pct": {
+            "type": "number"
+          },
+          "battery_end_pct": {
+            "type": "number"
           }
         },
         "required": [
@@ -32,7 +44,23 @@
     },
     {
       "name": "flight_summary",
-      "description": "",
+      "description": "Get flight history and statistics for a drone or all drones.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "drone_id": {
+            "type": "string"
+          },
+          "last_n": {
+            "type": "integer"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "compliance_report",
+      "description": "Generate a compliance report for a drone \u2014 regulatory adherence, altitude violations, maintenance status.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -43,6 +71,15 @@
         "required": [
           "drone_id"
         ]
+      }
+    },
+    {
+      "name": "list_drones",
+      "description": "List all registered drones and their flight statistics.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
       }
     }
   ]
