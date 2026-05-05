@@ -1,67 +1,38 @@
-# Flight Logger
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Drone and aircraft flight logging. Log flights, track compliance, view history, and manage maintenance. By MEOK AI Labs.
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/flight-logger-mcp)](https://github.com/CSOAI-ORG/flight-logger-mcp/stargazers)
 
-Flight Logger MCP — MEOK AI Labs. Drone/aircraft flight logging, compliance tracking, maintenance scheduling.
+# uflightU loggerU mcp
+
+**Flight Logger MCP — MEOK AI Labs. Drone/aircraft flight logging, compliance tracking, maintenance scheduling.**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/flight-logger-mcp)](https://www.npmjs.com/package/@meok-ai/flight-logger-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/flight-logger-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install flight-logger-mcp
+# or
+npm install -g @meok-ai/flight-logger-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-# Run standalone
-python server.py
+See the project repository for full documentation and examples.
 
-# Or via MCP
-mcp install flight-logger-mcp
-```
+## Enterprise Support
 
-## Tools
-
-### `log_flight`
-Log a completed drone/aircraft flight with full telemetry data.
-
-**Parameters:**
-- `drone_id` (str)
-- `duration_min` (float)
-- `distance_km` (float)
-- `max_altitude_m` (float)
-- `location` (str)
-- `notes` (str)
-- `battery_start_pct` (float)
-- `battery_end_pct` (float)
-
-### `flight_summary`
-Get flight history and statistics for a drone or all drones.
-
-**Parameters:**
-- `drone_id` (str)
-- `last_n` (int)
-
-### `compliance_report`
-Generate a compliance report for a drone — regulatory adherence, altitude violations, maintenance status.
-
-**Parameters:**
-- `drone_id` (str)
-
-### `list_drones`
-List all registered drones and their flight statistics.
-
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
-
-## Links
-
-- **Website**: [meok.ai](https://meok.ai)
-- **GitHub**: [CSOAI-ORG/flight-logger-mcp](https://github.com/CSOAI-ORG/flight-logger-mcp)
-- **PyPI**: [pypi.org/project/flight-logger-mcp](https://pypi.org/project/flight-logger-mcp/)
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
