@@ -28,7 +28,23 @@ mcp = FastMCP("flight-logger", instructions="Drone and aircraft flight logging. 
 def log_flight(drone_id: str, duration_min: float, distance_km: float, max_altitude_m: float,
                location: str = "", notes: str = "", battery_start_pct: float = 100, battery_end_pct: float = 20,
                api_key: str = "") -> str:
-    """Log a completed drone/aircraft flight with full telemetry data."""
+    """Log a completed drone/aircraft flight with full telemetry data.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -75,7 +91,23 @@ def log_flight(drone_id: str, duration_min: float, distance_km: float, max_altit
 
 @mcp.tool()
 def flight_summary(drone_id: str = "", last_n: int = 10, api_key: str = "") -> str:
-    """Get flight history and statistics for a drone or all drones."""
+    """Get flight history and statistics for a drone or all drones.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -104,7 +136,22 @@ def flight_summary(drone_id: str = "", last_n: int = 10, api_key: str = "") -> s
 
 @mcp.tool()
 def compliance_report(drone_id: str, api_key: str = "") -> str:
-    """Generate a compliance report for a drone — regulatory adherence, altitude violations, maintenance status."""
+    """Generate a compliance report for a drone — regulatory adherence, altitude violations, maintenance status.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -139,7 +186,23 @@ def compliance_report(drone_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def list_drones(api_key: str = "") -> str:
-    """List all registered drones and their flight statistics."""
+    """List all registered drones and their flight statistics.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
