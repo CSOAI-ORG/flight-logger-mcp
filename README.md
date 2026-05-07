@@ -1,3 +1,5 @@
+[![flight-logger-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/flight-logger-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/flight-logger-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/flight-logger-mcp)](https://github.com/CSOAI-ORG/flight-logger-mcp/stargazers)
