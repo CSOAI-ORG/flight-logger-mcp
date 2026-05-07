@@ -44,6 +44,18 @@ def log_flight(drone_id: str, duration_min: float, distance_km: float, max_altit
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        drone_id (str): The drone id to analyze or process.
+        duration_min (float): The duration min to analyze or process.
+        distance_km (float): The distance km to analyze or process.
+        max_altitude_m (float): The max altitude m to analyze or process.
+        location (str): The location to analyze or process.
+        notes (str): The notes to analyze or process.
+        battery_start_pct (float): The battery start pct to analyze or process.
+        battery_end_pct (float): The battery end pct to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -121,6 +133,12 @@ def flight_summary(drone_id: str = "", last_n: int = 10, api_key: str = "") -> s
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        drone_id (str): The drone id to analyze or process.
+        last_n (int): The last n to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -179,6 +197,11 @@ def compliance_report(drone_id: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        drone_id (str): The drone id to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -244,6 +267,10 @@ def list_drones(api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
