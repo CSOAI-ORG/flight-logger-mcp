@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Flight Logger MCP — MEOK AI Labs. Drone/aircraft flight logging, compliance tracking, maintenance scheduling."""
+"""
+Flight Logger MCP — MEOK AI Labs. Drone/aircraft flight logging, compliance tracking, maintenance scheduling."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 from persistence import ServerStore
 
@@ -73,7 +73,7 @@ def log_flight(drone_id: str, duration_min: float, distance_km: float, max_altit
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     flight_id = _store.list_length("flights") + 1
@@ -156,7 +156,7 @@ def flight_summary(drone_id: str = "", last_n: int = 10, api_key: str = "") -> s
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     all_flights = _store.list("flights")
@@ -219,7 +219,7 @@ def compliance_report(drone_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     flights = [f for f in _store.list("flights") if f["drone_id"] == drone_id]
@@ -288,7 +288,7 @@ def list_drones(api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     drones = []
@@ -297,5 +297,8 @@ def list_drones(api_key: str = "") -> str:
     return {"drones": drones, "total": len(drones)}
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

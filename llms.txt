@@ -1,0 +1,33 @@
+# flight-logger-mcp
+# **MCP server for flight logger mcp operations**
+
+## Install
+```bash
+pip install flight-logger-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `log_flight`
+Log a completed drone/aircraft flight with full telemetry data.
+
+### `flight_summary`
+Get flight history and statistics for a drone or all drones.
+
+### `compliance_report`
+Generate a compliance report for a drone — regulatory adherence, altitude violations, maintenance status.
+
+### `list_drones`
+List all registered drones and their flight statistics.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

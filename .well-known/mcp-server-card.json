@@ -1,0 +1,25 @@
+{
+  "name": "flight-logger-mcp",
+  "title": "Flight Logger Mcp",
+  "description": "MCP server for flight logger. Features log flight, flight summary, compliance report. From MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "log_flight"
+    },
+    {
+      "name": "flight_summary"
+    },
+    {
+      "name": "compliance_report"
+    },
+    {
+      "name": "list_drones"
+    }
+  ]
+}

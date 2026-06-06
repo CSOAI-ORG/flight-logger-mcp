@@ -1,0 +1,9 @@
+# flight-logger-mcp - Auto-trigger Rules
+
+When the user asks about flight logger, use flight-logger-mcp tools: log_flight, flight_summary, compliance_report, list_drones
+
+**MCP server for flight logger mcp operations**
+
+Install: `pip install flight-logger-mcp`
+
+By MEOK AI Labs — MIT licensed.
