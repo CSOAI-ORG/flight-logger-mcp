@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "flight-logger-mcp",
+    "description": "Flight Logger MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "flight-logger-mcp"
+      }
+    ],
+    "capabilities": [
+      "log_flight",
+      "flight_summary",
+      "compliance_report",
+      "list_drones"
+    ]
+  }
+}

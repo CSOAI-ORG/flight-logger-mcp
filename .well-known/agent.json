@@ -1,0 +1,59 @@
+{
+  "name": "flight-logger-mcp",
+  "description": "Flight Logger MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/flight-logger-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "log_flight",
+      "name": "Log Flight",
+      "description": "log_flight via flight-logger-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "flight_summary",
+      "name": "Flight Summary",
+      "description": "flight_summary via flight-logger-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "compliance_report",
+      "name": "Compliance Report",
+      "description": "compliance_report via flight-logger-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_drones",
+      "name": "List Drones",
+      "description": "list_drones via flight-logger-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
