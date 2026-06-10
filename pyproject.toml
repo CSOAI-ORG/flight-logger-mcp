@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "flight-logger-mcp"
-version = "1.0.6"
+version = "1.0.9"
 readme = "README.md"
 description = "MCP server for flight logger. Features log flight, flight summary, compliance report. From MEOK AI Labs."
 license = {file = "LICENSE"}
@@ -22,7 +22,7 @@ Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/flight-logger-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py", "auth_middleware.py"]
+only-include = ["auth_middleware.py", "persistence.py", "server.py"]
 
 [project.scripts]
 flight_logger_mcp = "server:main"
