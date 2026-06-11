@@ -40,8 +40,8 @@ tools:
     type: integer
     required: false
 - name: compliance_report
-  description: Generate a compliance report for a drone — regulatory adherence, altitude
-    violations, maintenance status.
+  description: "Generate a compliance report for a drone \u2014 regulatory adherence,\
+    \ altitude violations, maintenance status."
   parameters:
   - name: drone_id
     type: string
@@ -49,3 +49,16 @@ tools:
 - name: list_drones
   description: List all registered drones and their flight statistics.
   parameters: []
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+    - apiKey
+    properties:
+      apiKey:
+        type: string
+        description: Your MEOK API Key
+  commandFunction: "(config) => ({\n  command: 'uvx',\n  args: ['flight-logger-mcp',\
+    \ '--api-key', config.apiKey],\n  env: {\n    MEOK_API_KEY: config.apiKey\n  }\n\
+    })"
