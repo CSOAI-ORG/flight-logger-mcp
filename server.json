@@ -4,9 +4,8 @@
   "version": "1.0.9",
   "description": "Flight Logger MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/flight-logger-mcp",
-    "source": "https://github.com/CSOAI-ORG/flight-logger-mcp"
+    "source": "github"
   },
   "packages": [
     {
