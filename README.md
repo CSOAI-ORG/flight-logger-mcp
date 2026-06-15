@@ -1,4 +1,4 @@
-<!-- mcp-name: CSOAI-ORG/flight-logger-mcp -->
+<!-- mcp-name: io.github.CSOAI-ORG/flight-logger-mcp -->
 [![MCP Scorecard: 86/100](https://img.shields.io/badge/proofof.ai-86%2F100-5b21b6)](https://proofof.ai/scorecard/flight-logger-mcp.html)
 
 # Flight Logger MCP
